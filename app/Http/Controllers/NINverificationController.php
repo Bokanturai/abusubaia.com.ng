@@ -28,6 +28,7 @@ class NINverificationController extends Controller
         // Get Verification Service using ServiceManager
         $service = ServiceManager::getServiceWithFields('Verification', [
             ['name' => 'Verify NIN', 'code' => '610', 'price' => 80],
+            ['name' => 'Regular Slip', 'code' => 'V102', 'price' => 100],
             ['name' => 'standard slip', 'code' => '611', 'price' => 100],
             ['name' => 'preminum slip', 'code' => '612', 'price' => 150],
             ['name' => '1Vnin slip', 'code' => '616', 'price' => 100],
@@ -35,17 +36,20 @@ class NINverificationController extends Controller
         
         // Get Prices
         $verificationPrice = 0;
+        $regularSlipPrice = 0;
         $standardSlipPrice = 0;
         $premiumSlipPrice = 0;
         $vninSlipPrice = 0;
 
         if ($service) {
             $verificationField = $service->fields()->where('field_code', '610')->first();
+            $regularSlipField = $service->fields()->where('field_code', 'V102')->first();
             $standardSlipField = $service->fields()->where('field_code', '611')->first();
             $premiumSlipField = $service->fields()->where('field_code', '612')->first();
             $vninSlipField = $service->fields()->where('field_code', '616')->first();
 
             $verificationPrice = $verificationField ? $verificationField->getPriceForUserType($user->role) : 0;
+            $regularSlipPrice = $regularSlipField ? $regularSlipField->getPriceForUserType($user->role) : 0;
             $standardSlipPrice = $standardSlipField ? $standardSlipField->getPriceForUserType($user->role) : 0;
             $premiumSlipPrice = $premiumSlipField ? $premiumSlipField->getPriceForUserType($user->role) : 0;
             $vninSlipPrice = $vninSlipField ? $vninSlipField->getPriceForUserType($user->role) : 0;
@@ -56,6 +60,7 @@ class NINverificationController extends Controller
         return view('verification.nin-verification', [
             'wallet' => $wallet,
             'verificationPrice' => $verificationPrice,
+            'regularSlipPrice' => $regularSlipPrice,
             'standardSlipPrice' => $standardSlipPrice,
             'premiumSlipPrice' => $premiumSlipPrice,
             'vninSlipPrice' => $vninSlipPrice,
@@ -280,6 +285,7 @@ class NINverificationController extends Controller
     {
          // 1. Get Verification Service using ServiceManager
          $service = ServiceManager::getServiceWithFields('Verification', [
+            ['name' => 'Regular Slip', 'code' => 'V102', 'price' => 100],
             ['name' => 'standard slip', 'code' => '611', 'price' => 100],
             ['name' => 'preminum slip', 'code' => '612', 'price' => 150],
             ['name' => '1Vnin slip', 'code' => '616', 'price' => 100],
@@ -353,6 +359,18 @@ class NINverificationController extends Controller
     /**
      * Download NIN slips
      */
+    public function regularSlip($nin_no)
+    {
+        try {
+            $this->chargeForSlip(Auth::user(), 'V102'); // Charge for Regular Slip
+            
+            $repObj = new NIN_PDF_Repository();
+            return $repObj->regularPDF($nin_no);
+        } catch (\Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }
+    }
+
     public function standardSlip($nin_no)
     {
         try {

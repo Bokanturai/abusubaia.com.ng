@@ -38,6 +38,8 @@ use App\Http\Controllers\Agency\BvncrmController;
 use App\Http\Controllers\Agency\BvnUserController;
 use App\Http\Controllers\Agency\LicenseController;
 use App\Http\Controllers\Agency\NinPersonalisationController as AgencyNinPersonalisationController;
+use App\Http\Controllers\Agency\SuspensionNinController;
+
 
 // Admin Management Controllers
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
@@ -58,7 +60,11 @@ use App\Http\Controllers\Admin\Agency\NinIpeController;
 use App\Http\Controllers\Admin\Agency\NinPersonalisationController;
 use App\Http\Controllers\Admin\Agency\ValidationController;
 use App\Http\Controllers\Admin\Agency\VninToNibssController;
+use App\Http\Controllers\Admin\Agency\SuspensionNinController as AdminSuspensionNinController;
+use App\Http\Controllers\Admin\Agency\LicenseController as AdminLicenseController;
 use App\Http\Controllers\Admin\Agency\BvnUserController as AdminBvnUserController;
+
+
 use App\Http\Controllers\Admin\WalletSummaryController;
 use App\Http\Controllers\Admin\AnnouncementController as AdminAnnouncementController;
 
@@ -179,6 +185,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/', [NINverificationController::class, 'index'])->name('nin.verification.index');
         Route::post('/', [NINverificationController::class, 'store'])->name('nin.verification.store');
         Route::get('/standardSlip/{id}', [NINverificationController::class, 'standardSlip'])->name('standardSlip');
+        Route::get('/regularSlip/{id}', [NINverificationController::class, 'regularSlip'])->name('regularSlip');
         Route::get('/premiumSlip/{id}', [NINverificationController::class, 'premiumSlip'])->name('premiumSlip');
         Route::get('/vninSlip/{id}', [NINverificationController::class, 'vninSlip'])->name('vninSlip');
     });
@@ -226,6 +233,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/', [NinValidationController::class, 'store'])->name('nin-validation.store');
         Route::get('/check/{id}', [NinValidationController::class, 'checkStatus'])->name('nin-validation.check');
     });
+
+    Route::prefix('nin-suspension')->group(function () {
+        Route::get('/', [SuspensionNinController::class, 'index'])->name('nin-suspension');
+        Route::post('/', [SuspensionNinController::class, 'store'])->name('nin-suspension.store');
+    });
+
 
     Route::prefix('ipe')->group(function () {
         Route::get('/', [IpeController::class, 'index'])->name('ipe.index');
@@ -392,6 +405,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
                 Route::get('/check/{id}', [ValidationController::class, 'checkStatus'])->name('check');
             });
 
+            // Suspension NIN
+            Route::prefix('suspension')->name('suspension.')->group(function () {
+                Route::get('/', [AdminSuspensionNinController::class, 'index'])->name('index');
+                Route::get('/{id}', [AdminSuspensionNinController::class, 'show'])->name('show');
+                Route::post('/{id}/update', [AdminSuspensionNinController::class, 'update'])->name('update');
+            });
+
+
             // BVN User
             Route::prefix('bvn-user')->name('bvn-user.')->group(function () {
                 Route::get('/', [AdminBvnUserController::class, 'index'])->name('index');
@@ -405,6 +426,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
                 Route::get('/{id}', [VninToNibssController::class, 'show'])->name('show');
                 Route::post('/{id}/update', [VninToNibssController::class, 'update'])->name('update');
             });
+
+            // Government License and Permit
+            Route::prefix('license')->name('license.')->group(function () {
+                Route::get('/', [AdminLicenseController::class, 'index'])->name('index');
+                Route::get('/{id}', [AdminLicenseController::class, 'show'])->name('show');
+                Route::post('/{id}/update', [AdminLicenseController::class, 'update'])->name('update');
+            });
+
         });
     });
 });

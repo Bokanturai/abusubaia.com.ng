@@ -156,6 +156,12 @@
                                 <h6 class="fw-bold mb-3 text-center text-secondary">Download Slips (Charges Apply)</h6>
                                 <div class="d-flex flex-wrap justify-content-center gap-2">
                                     @if (!empty($verificationData['nin']))
+                                        <button onclick="confirmDownload('{{ route('regularSlip', $verificationData['nin']) }}', 'Regular Slip', {{ $regularSlipPrice ?? 0 }})" 
+                                            class="btn btn-info btn-wave text-white">
+                                            <i class="bi bi-file-earmark-richtext me-1"></i> Regular <br>
+                                            <small class="badge bg-dark bg-opacity-25">₦{{ number_format($regularSlipPrice ?? 0, 2) }}</small>
+                                        </button>
+
                                         <button onclick="confirmDownload('{{ route('standardSlip', $verificationData['nin']) }}', 'Standard Slip', {{ $standardSlipPrice ?? 0 }})" 
                                             class="btn btn-secondary btn-wave">
                                             <i class="bi bi-file-earmark-text me-1"></i> Standard <br>
@@ -166,6 +172,12 @@
                                             class="btn btn-primary btn-wave">
                                             <i class="bi bi-file-earmark-richtext me-1"></i> Premium <br>
                                             <small class="badge bg-dark bg-opacity-25">₦{{ number_format($premiumSlipPrice ?? 0, 2) }}</small>
+                                        </button>
+
+                                        <button onclick="confirmDownload('{{ route('vninSlip', $verificationData['nin']) }}', 'VNIN Slip', {{ $vninSlipPrice ?? 0 }})" 
+                                            class="btn btn-warning btn-wave text-white">
+                                            <i class="bi bi-qr-code me-1"></i> VNIN <br>
+                                            <small class="badge bg-dark bg-opacity-25">₦{{ number_format($vninSlipPrice ?? 0, 2) }}</small>
                                         </button>
                                     @else
                                         <p class="text-muted small">NIN data not available for slip download.</p>
@@ -187,8 +199,12 @@
     </div>
 
 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
     <!-- Slip Download Script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         // AI Voice Notification for Success
         @if (session('status') === 'success')

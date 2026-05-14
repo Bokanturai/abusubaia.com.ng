@@ -88,6 +88,8 @@
                                 class="{{ request()->routeIs('ipe.index') ? 'active' : '' }}">IPE</a></li>
                         <li><a href="{{ route('nin-personalisation.index') }}"
                                 class="{{ request()->routeIs('nin-personalisation.index') ? 'active' : '' }}">Personalisation</a></li>
+                        <li><a href="{{ route('nin-suspension') }}"
+                                class="{{ request()->routeIs('nin-suspension') ? 'active' : '' }}">Suspension NIN</a></li>
 
                     </ul>
                 </li>
@@ -203,6 +205,9 @@
                             <li><a href="{{ route('admin.validation.index') }}"
                                     class="{{ request()->routeIs('admin.validation.*') ? 'active' : '' }}">Validation</a>
                             </li>
+                            <li><a href="{{ route('admin.suspension.index') }}"
+                                    class="{{ request()->routeIs('admin.suspension.*') ? 'active' : '' }}">Suspension NIN</a>
+                            </li>
                             <li><a href="{{ route('admin.crm.index') }}"
                                     class="{{ request()->routeIs('admin.crm.*') ? 'active' : '' }}">CRM</a></li>
                             <li><a href="{{ route('admin.bvn-search.index') }}"
@@ -225,6 +230,9 @@
                                     class="{{ request()->routeIs('admin.ninipe.*') ? 'active' : '' }}">NIN IPE</a></li>
                             <li><a href="{{ route('admin.vnin-nibss.index') }}"
                                     class="{{ request()->routeIs('admin.vnin-nibss.*') ? 'active' : '' }}">VNIN to NIBSS</a>
+                            </li>
+                            <li><a href="{{ route('admin.license.index') }}"
+                                    class="{{ request()->routeIs('admin.license.*') ? 'active' : '' }}">License & Permit</a>
                             </li>
                             <li><a href="{{ route('admin.nin-personalisation.index') }}"
                                     class="{{ request()->routeIs('admin.nin-personalisation.*') ? 'active' : '' }}">NIN

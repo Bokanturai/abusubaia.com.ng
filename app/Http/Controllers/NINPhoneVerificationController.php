@@ -382,6 +382,7 @@ class NINPhoneVerificationController extends Controller
     private function chargeForSlip($user, $fieldCode)
     {
          $service = ServiceManager::getServiceWithFields('Verification', [
+            ['name' => 'Regular Slip', 'code' => 'V102', 'price' => 100],
             ['name' => 'standard slip', 'code' => '611', 'price' => 100],
             ['name' => 'preminum slip', 'code' => '612', 'price' => 150],
         ]);

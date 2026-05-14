@@ -131,6 +131,7 @@ class ServiceSeeder extends Seeder
                 ['name' => 'Record update', 'code' => '018', 'price' => 1000],
                 ['name' => 'Modification Validation', 'code' => '019', 'price' => 1200],
                 ['name' => 'NIN Migration', 'code' => '020', 'price' => 3000],
+                ['name' => 'Suspension NIN', 'code' => '041', 'price' => 3000],
             ]);
 
             // IPE Services

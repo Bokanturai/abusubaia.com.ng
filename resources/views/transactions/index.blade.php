@@ -55,6 +55,8 @@
                                         <option value="AFFIDAVIT" {{ request('service_type') == 'AFFIDAVIT' ? 'selected' : '' }}>Affidavit</option>
                                         <option value="NIN_SELFSERVICE" {{ request('service_type') == 'NIN_SELFSERVICE' ? 'selected' : '' }}>NIN Self Service</option>
                                         <option value="NIN_VALIDATION" {{ request('service_type') == 'NIN_VALIDATION' ? 'selected' : '' }}>NIN Validation</option>
+                                        <option value="NIN_SUSPENSION" {{ request('service_type') == 'NIN_SUSPENSION' ? 'selected' : '' }}>NIN Suspension</option>
+                                        <option value="License Registration" {{ request('service_type') == 'License Registration' ? 'selected' : '' }}>License & Permit</option>
                                         <option value="IPE" {{ request('service_type') == 'IPE' ? 'selected' : '' }}>IPE</option>
                                         <option value="NIN_MODIFICATION" {{ request('service_type') == 'NIN_MODIFICATION' ? 'selected' : '' }}>NIN Modification</option>
                                         <option value="TIN_INDIVIDUAL" {{ request('service_type') == 'TIN_INDIVIDUAL' ? 'selected' : '' }}>TIN Individual</option>
