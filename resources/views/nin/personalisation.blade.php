@@ -191,14 +191,6 @@
                                                         @php
                                                             $fileUrl = $submission->file_url ? \Illuminate\Support\Facades\Storage::url($submission->file_url) : '';
                                                         @endphp
-                                                        <button type="button"
-                                                                class="btn btn-sm btn-icon btn-outline-primary"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#commentModal"
-                                                                data-comment="{{ $submission->comment ?? 'Your request is in review.' }}"
-                                                                data-file-url="{{ $fileUrl }}">
-                                                            <i class="bi bi-eye-fill"></i>
-                                                        </button>
                                                         @if($fileUrl)
                                                         <a href="{{ $fileUrl }}" 
                                                            class="btn btn-sm btn-icon btn-outline-success" 
