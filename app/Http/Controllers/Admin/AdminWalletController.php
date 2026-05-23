@@ -103,18 +103,16 @@ class AdminWalletController extends Controller
             ]);
         }
 
-        if ($request->type === 'manual_debit' && $wallet->available_balance < $request->amount) {
+        if ($request->type === 'manual_debit' && $wallet->balance < $request->amount) {
             return redirect()->back()->with('error', 'User have insufficient balance');
         }
 
         DB::transaction(function () use ($wallet, $request, $user) {
             if ($request->type === 'manual_credit') {
                 $wallet->increment('balance', $request->amount);
-                $wallet->increment('available_balance', $request->amount);
                 $transactionType = 'manual_credit';
             } else {
                 $wallet->decrement('balance', $request->amount);
-                $wallet->decrement('available_balance', $request->amount);
                 $transactionType = 'manual_debit';
             }
 
@@ -206,12 +204,10 @@ class AdminWalletController extends Controller
                     if ($type === 'manual_credit') {
                         Wallet::whereIn('user_id', $userIdsToUpdate)->update([
                             'balance' => DB::raw("balance + $amount"),
-                            'available_balance' => DB::raw("available_balance + $amount")
                         ]);
                     } else {
                         Wallet::whereIn('user_id', $userIdsToUpdate)->update([
                             'balance' => DB::raw("balance - $amount"),
-                            'available_balance' => DB::raw("available_balance - $amount")
                         ]);
                     }
                     Transaction::insert($transactions);
