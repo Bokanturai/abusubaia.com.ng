@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - Suspension Details</title>
+    <title>Digital Verify Sub - Suspension Details</title>
 
     <div class="content p-4">
         <div class="row mb-4">

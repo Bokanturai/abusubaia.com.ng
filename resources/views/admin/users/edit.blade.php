@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - Edit User</title>
+    <title>Digital Verify Sub - Edit User</title>
 
     <div class="content">
         <!-- Page Header -->

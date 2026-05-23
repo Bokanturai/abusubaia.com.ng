@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - {{ $title ?? 'IPE Clearance' }}</title>
+    <title>Digital Verify Sub - {{ $title ?? 'IPE Clearance' }}</title>
 
     <div class="page-body">
         <div class="container-fluid">

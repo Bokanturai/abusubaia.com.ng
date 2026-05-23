@@ -236,7 +236,7 @@ class BvnSearchController extends Controller
 
 
     /**
-     * Check status of a BVN Search request using Arewa Smart API
+     * Check status of a BVN Search request using Digital Verify Sub API
      */
     public function checkStatus($id)
     {

@@ -276,7 +276,7 @@ class DataController extends Controller
             return redirect()->back()->with('error', 'Insufficient wallet balance! You need ₦' . number_format($payableAmount, 2));
         }
 
-        // 5. Call Arewa Smart Data API
+        // 5. Call Digital Verify Sub Data API
         try {
             $response = Http::withHeaders([
                 'Authorization' => 'Bearer ' . $this->getApiToken(),
@@ -290,13 +290,13 @@ class DataController extends Controller
             ]);
 
         } catch (\Exception $e) {
-            Log::error('Arewa Smart Data API Connection Error: ' . $e->getMessage());
+            Log::error('Digital Verify Sub Data API Connection Error: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Could not connect to data provider. Please try again later.');
         }
 
         // 6. Process Response
         $data = $response->json();
-        Log::info('Arewa Smart Data API Response', ['response' => $data]);
+        Log::info('Digital Verify Sub Data API Response', ['response' => $data]);
 
         $isSuccessful = false;
         
@@ -346,7 +346,7 @@ class DataController extends Controller
             ]);
         }
 
-        Log::error('Arewa Smart Data API Response Error', ['response' => $data]);
+        Log::error('Digital Verify Sub Data API Response Error', ['response' => $data]);
         $errorMessage = $data['message'] ?? 'Data purchase failed. Please try again.';
         return redirect()->back()->with('error', $errorMessage);
     }

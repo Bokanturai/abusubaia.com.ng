@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - Transactions</title>
+    <title>Digital Verify Sub - Transactions</title>
 
     <div class="content">
         <!-- Stats Cards -->

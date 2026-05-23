@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Http;
 class BVNmodController extends Controller
 {
     /**
-     * Check status of a bvn_modification using Arewa Smart API
+     * Check status of a bvn_modification using Digital Verify Sub API
      */
     public function checkStatus($id)
     {

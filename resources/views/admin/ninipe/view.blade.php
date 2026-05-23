@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - NIN - IPE details</title>
+    <title>Digital Verify Sub - NIN - IPE details</title>
 
     <div class="content">
         <div class="row mb-4">
@@ -401,7 +401,7 @@
                         
                         Swal.fire({
                             title: 'Checking Status...',
-                            text: 'Please wait while we fetch the latest status from Arewa Smart.',
+                            text: 'Please wait while we fetch the latest status from Digital Verify Sub.',
                             icon: 'info',
                             showCancelButton: true,
                             confirmButtonColor: '#6366f1',

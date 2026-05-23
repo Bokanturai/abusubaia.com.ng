@@ -133,7 +133,7 @@ class DataVariationController extends Controller
     }
 
     /**
-     * Sync data variations from Arewa Smart API.
+     * Sync data variations from Digital Verify Sub API.
      */
     public function sync()
     {
@@ -147,7 +147,7 @@ class DataVariationController extends Controller
             ])->get($apiUrl);
 
             if (!$response->successful()) {
-                Log::error('Arewa Smart Sync Error', ['response' => $response->json()]);
+                Log::error('Digital Verify Sub Sync Error', ['response' => $response->json()]);
                 return back()->with('error', 'Failed to fetch data from API: ' . ($response->json()['message'] ?? 'Unknown Error'));
             }
 
@@ -181,7 +181,7 @@ class DataVariationController extends Controller
             return back()->with('success', "Successfully synced {$syncedCount} variations.");
 
         } catch (\Exception $e) {
-            Log::error('Arewa Smart Sync Exception', ['error' => $e->getMessage()]);
+            Log::error('Digital Verify Sub Sync Exception', ['error' => $e->getMessage()]);
             return back()->with('error', 'An error occurred during sync: ' . $e->getMessage());
         }
     }

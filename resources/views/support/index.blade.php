@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaidi Verify - Support Center</title>
+    <title>Digital Verify Sub - Support Center</title>
 
     <div class="page-body">
         <div class="container-fluid">
@@ -30,19 +30,19 @@
 
                             <div class="d-grid gap-3">
                                 <!-- WhatsApp -->
-                                <a href="https://wa.me/+2348165625614" target="_blank"
+                                <a href="https://wa.me/09112345678" target="_blank"
                                     class="btn btn-outline-success border-2 fw-semibold d-flex align-items-center justify-content-center py-2">
                                     <i class="bi bi-whatsapp fs-5 me-2"></i> WhatsApp
                                 </a>
 
                                 <!-- Facebook -->
-                                <a href="#" target="_blank"
+                                <a href="https://www.facebook.com/katsinanews?mibextid=ZbWKwL" target="_blank"
                                     class="btn btn-outline-primary border-2 fw-semibold d-flex align-items-center justify-content-center py-2">
                                     <i class="bi bi-facebook fs-5 me-2"></i> Facebook
                                 </a>
 
                                 <!-- TikTok -->
-                                <a href="#" target="_blank"
+                                <a href="https://www.tiktok.com/@safana?_r=1&_t=ZS-93SEZ246vAm" target="_blank"
                                     class="btn btn-outline-dark border-2 fw-semibold d-flex align-items-center justify-content-center py-2">
                                     <i class="bi bi-tiktok fs-5 me-2"></i> TikTok
                                 </a>
@@ -57,7 +57,7 @@
                             <div class="mt-4 p-3 bg-light rounded-3 border">
                                 <h6 class="fw-bold text-primary mb-2"><i class="bi bi-envelope me-2"></i>Email Support
                                 </h6>
-                                <p class="small text-muted mb-0">zaidutasiu14@gmail.com</p>
+                                <p class="small text-muted mb-0">safanane@gmail.com</p>
                             </div>
                         </div>
                     </div>

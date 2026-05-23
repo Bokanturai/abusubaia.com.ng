@@ -1,5 +1,5 @@
 <x-app-layout>
-   <title>Zaid verify - Vnin to nibss</title>
+   <title>Digital Verify Sub - Vnin to nibss</title>
 
     <div class="content">
         <div class="row mb-4">

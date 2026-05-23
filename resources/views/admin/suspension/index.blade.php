@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - NIN - Suspension</title>
+    <title>Digital Verify Sub - NIN - Suspension</title>
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-title">

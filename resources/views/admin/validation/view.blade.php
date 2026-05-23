@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Imam Data Sub - Validation Details</title>
+    <title>Digital Verify Sub - Validation Details</title>
 
     <div class="content">
         <div class="row mb-4">
@@ -408,7 +408,7 @@
                         
                         Swal.fire({
                             title: 'Checking Status...',
-                            text: 'Please wait while we fetch the latest status from Arewa Smart.',
+                            text: 'Please wait while we fetch the latest status from Digital Verify Sub.',
                             allowOutsideClick: false,
                             didOpen: () => {
                                 Swal.showLoading();

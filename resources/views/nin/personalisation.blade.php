@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid Verify - {{ $title ?? 'NIN Personalisation Form' }}</title>
+    <title>Digital Verify Sub - {{ $title ?? 'NIN Personalisation Form' }}</title>
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-title mb-3">

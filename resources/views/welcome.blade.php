@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Zaidi Verify - {{ $title ?? 'Welcome Sir All our services is going smothly' }}</title>
+    <title>Digital Verify Sub - {{ $title ?? 'Welcome Sir All our services is going smothly' }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800&display=swap" rel="stylesheet" />
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Open Graph / WhatsApp Meta Tags -->
-    <meta property="og:title" content="Zaidi Verify - Innovative Digital Solutions">
+    <meta property="og:title" content="Digital Verify Sub - Innovative Digital Solutions">
     <meta property="og:description"
         content="Empowering northern Nigeria through innovative digital solutions and smart technology services.">
     <meta property="og:image" content="{{ asset('assets/img/logo/logo.png') }}">
@@ -38,7 +38,7 @@
     <header>
         <div class="container-fluid header-container px-0 px-md-3">
             <a href="#" class="logo">
-                <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Zaidi Verify"
+                <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Digital Verify Sub"
                     style="height: 50px; margin-right: 10px;">
             </a>
             <div class="mobile-menu">
@@ -58,28 +58,45 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home"
-        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 19, 240, 0.3)), 
-             url('{{ asset('assets/images/logo/hero.png') }}') no-repeat center center/cover; min-height: 100vh; display: flex; align-items: center;">
-        <div class="container hero-content text-center px-0 px-md-3">
-            <h1 class="mb-4" data-aos="fade-down" data-aos-duration="1000"
-                style="font-size: 4rem; font-weight: 800; color: #FF13F0; text-shadow: 0 4px 15px rgba(255, 19, 240, 0.3);">
-                Agency and Verification Services for Your Business
-            </h1>
-            <p class="mb-5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"
-                style="font-size: 1.4rem; max-width: 850px; margin: 0 auto; line-height: 1.6; color: rgba(255, 255, 255, 0.95); text-shadow: 0 2px 10px rgba(0,0,0,0.4);">
-                Experience premium agency services tailored for growth. Affordable, reliable, and innovative solutions
-                at your fingertips.
-            </p>
-            <div class="hero-btns" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <a href="{{route('register')}}" class="btn btn-primary btn-lg me-3"
-                    style="padding: 15px 40px; font-size: 1.1rem;">
-                    Get Started
-                </a>
-                <a href="{{route('login')}}" class="btn btn-secondary-outline btn-lg"
-                    style="padding: 15px 40px; font-size: 1.1rem; border-color: #FF13F0; color: #fff;">
-                    Login Now
-                </a>
+    <section class="hero position-relative overflow-hidden" id="home"
+        style="background: linear-gradient(rgba(0, 8, 36, 0.85), rgba(0, 47, 186, 0.7)), url('{{ asset('assets/images/logo/hero.png') }}') no-repeat center center/cover; min-height: 100vh; display: flex; align-items: center;">
+        
+        <!-- Animated Background Elements -->
+        <div style="position: absolute; top: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(77,107,224,0.4) 0%, transparent 70%); border-radius: 50%; filter: blur(60px); animation: pulse-green 6s infinite alternate;"></div>
+        <div style="position: absolute; bottom: -10%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,47,186,0.5) 0%, transparent 70%); border-radius: 50%; filter: blur(80px); animation: pulse-green 8s infinite alternate-reverse;"></div>
+
+        <div class="container hero-content-wrapper position-relative z-3 mt-5 pt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <span class="badge rounded-pill bg-white text-primary mb-4 px-4 py-2 shadow-sm" data-aos="fade-down" style="font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; color: #002fba !important;">
+                        <i class="fas fa-rocket me-2" style="color: #002fba;"></i> Elevate Your Business Today
+                    </span>
+                    <h1 class="display-3 fw-bold mb-4 text-white" data-aos="fade-up" data-aos-delay="100" style="line-height: 1.2;">
+                        Modern Agency & <br/><span style="color: #6da2ff; text-shadow: 0 0 20px rgba(109,162,255,0.4);">Verification</span> Services
+                    </h1>
+                    <p class="lead mb-5 mx-auto" data-aos="fade-up" data-aos-delay="200" style="max-width: 750px; color: rgba(255,255,255,0.9); font-size: 1.25rem;">
+                        Experience premium, reliable, and innovative digital solutions tailored for your growth. Fast-track your verification needs with our secure platform.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="300">
+                        <a href="{{route('register')}}" class="btn btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg text-white" style="background: linear-gradient(135deg, #002fba, #4d6be0); border: none; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,47,186,0.5)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 .5rem 1rem rgba(0,0,0,.15)';">
+                            Get Started Now <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="{{route('login')}}" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold" style="backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.5); transition: background 0.3s, color 0.3s;" onmouseover="this.style.background='#fff'; this.style.color='#002fba';" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.color='#fff';">
+                            Login Now
+                        </a>
+                    </div>
+                    
+                    <!-- Trust indicators -->
+                    <div class="mt-5 pt-4 border-top border-light border-opacity-25" data-aos="fade-up" data-aos-delay="400">
+                        <p class="text-white-50 text-uppercase mb-3 fw-bold" style="font-size: 0.85rem; letter-spacing: 2px;">Trusted by 5,000+ Businesses</p>
+                        <div class="d-flex justify-content-center gap-4 opacity-75">
+                            <i class="fas fa-shield-alt fa-2x text-white"></i>
+                            <i class="fas fa-lock fa-2x text-white"></i>
+                            <i class="fas fa-check-circle fa-2x text-white"></i>
+                            <i class="fas fa-globe fa-2x text-white"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -88,46 +105,43 @@
     @include('pages.landing.services')
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section"
-        style="padding: 100px 0; background: linear-gradient(135deg, #F7F3ED 0%, #f0ece1 100%);">
-        <!-- Background Patterns -->
-        <div
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
-        </div>
+    <section id="testimonials" class="testimonials-section position-relative"
+        style="padding: 100px 0; background: #f8fafc; overflow: hidden;">
+        <!-- Modern Grid Pattern Background -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.4; background-image: radial-gradient(#002fba 1px, transparent 1px); background-size: 30px 30px;"></div>
 
-
-        <div class="container px-0 px-md-3" style="position: relative; z-index: 2;">
+        <div class="container px-0 px-md-3 position-relative z-3">
             <div class="section-title text-center mb-5" data-aos="fade-up">
-                <h4
-                    style="color: #FF13F0; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; font-size: 0.9rem;">
-                    Testimonials</h4>
-                <h2 style="color: #111827; font-weight: 800; font-size: 2.8rem; margin-top: 10px;">Trusted by Leaders
-                </h2>
-                <hr
-                    style="width: 80px; height: 4px; background: #FF13F0; margin: 20px auto; border: none; border-radius: 2px;">
+                <span class="badge bg-primary bg-opacity-10 px-4 py-2 rounded-pill mb-3 fw-bold" style="letter-spacing: 2px; color: #002fba; font-size: 0.85rem;">CLIENT SUCCESS STORIES</span>
+                <h2 style="color: #0f172a; font-weight: 800; font-size: 2.8rem; margin-top: 10px;">Trusted by Industry Leaders</h2>
+                <hr style="width: 80px; height: 4px; background: #002fba; margin: 20px auto; border: none; border-radius: 2px;">
                 <p class="text-muted" style="max-width: 650px; margin: 0 auto; font-size: 1.15rem;">
-                    See what our partners and clients have to say about their experience working with Zaidi Verify.
+                    See what our partners and clients have to say about their experience working with Digital Verify Sub.
                 </p>
             </div>
 
-            <div class="row g-4">
+            <div class="row g-4 mt-2">
                 <!-- Testimonial 1 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-card-premium">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="review-text">"Zaidi Verify transformed our operations with cutting-edge solutions.
-                            Their
-                            support team is always responsive and professional! Truly a game changer for our business."
+                    <div class="modern-testimonial-card h-100 p-4 p-md-5 bg-white rounded-4 shadow-sm position-relative border-0" style="transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.08)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 .125rem .25rem rgba(0,0,0,.075)';">
+                        <div class="position-absolute top-0 end-0 p-4" style="opacity: 0.05;">
+                            <i class="fas fa-quote-right fa-4x" style="color: #002fba;"></i>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="flex-shrink-0">
+                                <img src="{{ asset('assets/images/avatar/avatar-8.jpg') }}" alt="Abdulrahman Musa" class="rounded-circle shadow-sm" style="width: 65px; height: 65px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="mb-0 fw-bold" style="color: #0f172a; font-size: 1.1rem;">Abdulrahman Musa</h5>
+                                <span class="small fw-semibold" style="color: #002fba;">CEO, NorthernTech</span>
+                            </div>
+                        </div>
+                        <p class="fst-italic mb-0" style="line-height: 1.8; font-size: 1.05rem; color: #475569;">
+                            "Digital Verify Sub transformed our operations with cutting-edge solutions. Their support team is always responsive and professional! Truly a game changer for our business."
                         </p>
-                        <div class="reviewer-info">
-                            <img src="{{ asset('assets/images/avatar/avatar-8.jpg') }}" alt="Abdulrahman Musa">
-                            <div>
-                                <h4>Abdulrahman Musa</h4>
-                                <span>CEO, NorthernTech</span>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                        class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
+                        <div class="mt-4 pt-3 border-top border-light">
+                            <div class="d-flex fs-6" style="color: #ffd700;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </div>
                     </div>
@@ -135,39 +149,54 @@
 
                 <!-- Testimonial 2 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-card-premium">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="review-text">"Working with Zaidi Verify has been a seamless experience. Their
-                            expertise
-                            and attention to detail are unmatched. They delivered exactly what we needed, on time."</p>
-                        <div class="reviewer-info">
-                            <img src="{{ asset('assets/images/avatar/avatar-3.jpg') }}" alt="Fatima Bello">
-                            <div>
-                                <h4>Fatima Bello</h4>
-                                <span>Manager, Zaidi Verify Logistics</span>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                        class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
+                    <div class="modern-testimonial-card h-100 p-4 p-md-5 bg-white rounded-4 shadow-sm position-relative border-0" style="transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.08)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 .125rem .25rem rgba(0,0,0,.075)';">
+                        <div class="position-absolute top-0 end-0 p-4" style="opacity: 0.05;">
+                            <i class="fas fa-quote-right fa-4x" style="color: #002fba;"></i>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="flex-shrink-0">
+                                <img src="{{ asset('assets/images/avatar/avatar-3.jpg') }}" alt="Fatima Bello" class="rounded-circle shadow-sm" style="width: 65px; height: 65px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="mb-0 fw-bold" style="color: #0f172a; font-size: 1.1rem;">Fatima Bello</h5>
+                                <span class="small fw-semibold" style="color: #002fba;">Manager, Logistics</span>
+                            </div>
+                        </div>
+                        <p class="fst-italic mb-0" style="line-height: 1.8; font-size: 1.05rem; color: #475569;">
+                            "Working with Digital Verify Sub has been a seamless experience. Their expertise and attention to detail are unmatched. They delivered exactly what we needed, on time."
+                        </p>
+                        <div class="mt-4 pt-3 border-top border-light">
+                            <div class="d-flex fs-6" style="color: #ffd700;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
+                <!-- Testimonial 3 - Highlighted -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial-card-premium">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="review-text">"The quality of service and support we've received from Zaidi Verify is
-                            outstanding. Highly recommended for any business looking to scale digitally."</p>
-                        <div class="reviewer-info">
-                            <img src="{{ asset('assets/images/avatar/avatar-1.jpg') }}" alt="Emeka Johnson">
-                            <div>
-                                <h4>Emeka Johnson</h4>
-                                <span>IT Director, Zaidi Verify Ltd</span>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="modern-testimonial-card h-100 p-4 p-md-5 text-white rounded-4 shadow-lg position-relative border-0 overflow-hidden" style="background: linear-gradient(135deg, #002fba 0%, #001f7a 100%); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 47, 186, 0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 1rem 3rem rgba(0,0,0,.175)';">
+                        <div class="position-absolute top-0 end-0 p-4" style="opacity: 0.15;">
+                            <i class="fas fa-quote-right fa-4x text-white"></i>
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 w-100 h-50" style="background: linear-gradient(transparent, rgba(0,0,0,0.2)); z-index: 1;"></div>
+                        
+                        <div class="position-relative z-2">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="flex-shrink-0">
+                                    <img src="{{ asset('assets/images/avatar/avatar-1.jpg') }}" alt="Emeka Johnson" class="rounded-circle shadow-sm" style="width: 65px; height: 65px; object-fit: cover; border: 3px solid rgba(255,255,255,0.3);">
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0 fw-bold text-white" style="font-size: 1.1rem;">Emeka Johnson</h5>
+                                    <span class="small fw-semibold" style="color: #8bb0ff;">IT Director</span>
+                                </div>
+                            </div>
+                            <p class="fst-italic mb-0" style="line-height: 1.8; font-size: 1.05rem; color: rgba(255,255,255,0.9);">
+                                "The quality of service and support we've received from Digital Verify Sub is outstanding. Highly recommended for any business looking to scale digitally."
+                            </p>
+                            <div class="mt-4 pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+                                <div class="d-flex fs-6" style="color: #ffd700;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -183,24 +212,24 @@
     <footer>
         <!-- Background Decoration -->
         <div
-            style="position: absolute; top: 0; right: 0; width: 400px; height: 400px; background: radial-gradient(circle, rgba(136, 92, 10, 0.1) 0%, rgba(0,0,0,0) 70%);">
+            style="position: absolute; top: 0; right: 0; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 47, 186, 0.1) 0%, rgba(0,0,0,0) 70%);">
         </div>
 
         <div class="container px-0 px-md-3" style="position: relative; z-index: 2;">
             <div class="row g-5">
                 <!-- Company Info -->
                 <div class="col-lg-4 col-md-6">
-                    <h2 style="color: #FF13F0; font-weight: 800; margin-bottom: 25px; font-size: 2rem;">Zaidi Verify
+                    <h2 style="color: #002fba; font-weight: 800; margin-bottom: 25px; font-size: 2rem;">Digital Verify Sub
                     </h2>
                     <p style="color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 30px;">
                         Providing innovative technology solutions to help businesses thrive in the digital world. We are
                         committed to excellence and sustainable growth in Northern Nigeria.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/katsinanews?mibextid=ZbWKwL" class="footer-social"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="footer-social"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@safana?_r=1&_t=ZS-93SEZ246vAm" class="footer-social"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -208,8 +237,8 @@
                 <div class="col-lg-2 col-md-6">
                     <h3
                         style="color: #fff; font-size: 1.2rem; font-weight: 700; margin-bottom: 25px; display: inline-block;">
-                        ZAIDI VERIFY</h3>
-                    <div style="width: 40px; height: 3px; background: #FF13F0; margin-bottom: 20px;"></div>
+                        DIGITAL VERIFY SUB</h3>
+                    <div style="width: 40px; height: 3px; background: #002fba; margin-bottom: 20px;"></div>
                     <ul class="footer-links list-unstyled">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
@@ -225,7 +254,7 @@
                     <h3
                         style="color: #fff; font-size: 1.2rem; font-weight: 700; margin-bottom: 25px; display: inline-block;">
                         Our Services</h3>
-                    <div style="width: 40px; height: 3px; background: #FF13F0; margin-bottom: 20px;"></div>
+                    <div style="width: 40px; height: 3px; background: #002fba; margin-bottom: 20px;"></div>
                     <ul class="footer-links list-unstyled">
                         <li><a href="#services">NIN Services</a></li>
                         <li><a href="#services">BVN Services</a></li>
@@ -240,23 +269,22 @@
                     <h3
                         style="color: #fff; font-size: 1.2rem; font-weight: 700; margin-bottom: 25px; display: inline-block;">
                         Contact Us</h3>
-                    <div style="width: 40px; height: 3px; background: #FF13F0; margin-bottom: 20px;"></div>
+                    <div style="width: 40px; height: 3px; background: #002fba; margin-bottom: 20px;"></div>
                     <ul class="footer-contact list-unstyled">
                         <li style="margin-bottom: 20px; display: flex;">
-                            <div style="width: 30px; color: #FF13F0; margin-top: 2px;"><i
+                            <div style="width: 30px; color: #002fba; margin-top: 2px;"><i
                                     class="fas fa-map-marker-alt"></i></div>
-                            <span style="color: rgba(255,255,255,0.8);">Adamawa state yola beside gombi road Adamawa
-                                Nigeria</span>
+                            <span style="color: rgba(255,255,255,0.8);">Tudun Wada Street, Gwammaja, Kano</span>
                         </li>
                         <li style="margin-bottom: 20px; display: flex;">
-                            <div style="width: 30px; color: #FF13F0; margin-top: 2px;"><i class="fas fa-phone"></i>
+                            <div style="width: 30px; color: #002fba; margin-top: 2px;"><i class="fas fa-phone"></i>
                             </div>
-                            <span style="color: rgba(255,255,255,0.8);">+2348165625614</span>
+                            <span style="color: rgba(255,255,255,0.8);">09112345678</span>
                         </li>
                         <li style="margin-bottom: 20px; display: flex;">
-                            <div style="width: 30px; color: #FF13F0; margin-top: 2px;"><i class="fas fa-envelope"></i>
+                            <div style="width: 30px; color: #002fba; margin-top: 2px;"><i class="fas fa-envelope"></i>
                             </div>
-                            <span style="color: rgba(255,255,255,0.8);">zaidutasiu14@gmail.com</span>
+                            <span style="color: rgba(255,255,255,0.8);">safanane@gmail.com</span>
                         </li>
                     </ul>
                 </div>
@@ -265,8 +293,8 @@
             <hr style="border-color: rgba(255,255,255,0.1); margin: 60px 0 30px;">
 
             <div class="footer-bottom text-center">
-                <p style="color: rgba(255,255,255,0.6); margin: 0;">&copy; {{ date('Y') }} Zaidi Verify. All rights
-                    reserved. | Designed with <i class="fas fa-heart" style="color: #FF13F0;"></i> by Zaidi Verify Team.
+                <p style="color: rgba(255,255,255,0.6); margin: 0;">&copy; {{ date('Y') }} Digital Verify Sub. All rights
+                    reserved. | Designed with <i class="fas fa-heart" style="color: #002fba;"></i> by Digital Verify Sub Team.
                 </p>
             </div>
         </div>
@@ -307,17 +335,17 @@
                 <div class="modal-body">
                     <div class="text-center mb-4">
                         <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo" style="height: 60px;">
-                        <h4 class="mt-3 text-dark">Zaidi Verify Data Privacy Commitment</h4>
+                        <h4 class="mt-3 text-dark">Digital Verify Sub Data Privacy Commitment</h4>
                     </div>
 
                     <p class="lead text-center mb-4" style="font-size: 1.1rem; color: #555;">
-                        At Zaidi Verify, we are committed to protecting your personal data in compliance with the
+                        At Digital Verify Sub, we are committed to protecting your personal data in compliance with the
                         <strong>Nigeria Data Protection Regulation (NDPR) 2019</strong>.
                     </p>
 
                     <div class="policy-section">
                         <h5>1. Introduction</h5>
-                        <p>This Privacy Policy explains how Zaidi Verify collects, uses, and protects your personal
+                        <p>This Privacy Policy explains how Digital Verify Sub collects, uses, and protects your personal
                             information when you use our digital solutions, including our website, mobile applications,
                             and NIN/BVN services.</p>
                     </div>
@@ -350,7 +378,7 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/+2347067673296" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <a href="https://wa.me/2347036826500" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
     <script src="{{ asset('assets/js/landing.js') }}"></script>

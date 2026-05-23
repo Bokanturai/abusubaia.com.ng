@@ -3,15 +3,15 @@
     style="padding: 100px 0; background: #fff; position: relative; overflow: hidden;">
     <!-- Decorative Circle -->
     <div
-        style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(136, 92, 10, 0.1); border-radius: 50%;">
+        style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(0, 47, 186, 0.1); border-radius: 50%;">
     </div>
 
     <div class="container px-0 px-md-3">
         <div class="section-title text-center mb-5" data-aos="fade-up">
-            <h4 style="color: #FF13F0; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Get In Touch
+            <h4 style="color: #002fba; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Get In Touch
             </h4>
             <h2 style="color: #111827; font-weight: 800; font-size: 2.5rem;">We're Here to Help</h2>
-            <hr style="width: 60px; height: 3px; background: #CBA135; margin: 15px auto; border: none;">
+            <hr style="width: 60px; height: 3px; background: #002fba; margin: 15px auto; border: none;">
             <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
                 Our expert team is available 24/7 to assist you. Reach out via phone, WhatsApp, or drop us a message
                 below.
@@ -22,7 +22,7 @@
             <!-- Support Info -->
             <div class="col-12 col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
                 <div class="support-info-card rounded-0 rounded-md-4"
-                    style="background: linear-gradient(135deg, #FF13F0 0%, #D600C7 100%); padding: 40px; color: white; box-shadow: 0 20px 40px rgba(255, 19, 240, 0.3);">
+                    style="background: linear-gradient(135deg, #002fba 0%, #0047e1 100%); padding: 40px; color: white; box-shadow: 0 20px 40px rgba(0, 47, 186, 0.3);">
                     <h3 style="font-weight: 700; margin-bottom: 30px;">Contact Information</h3>
 
                     <div class="d-flex align-items-center mb-4">
@@ -32,8 +32,8 @@
                         </div>
                         <div>
                             <span style="display: block; opacity: 0.8; font-size: 0.9rem;">Call Us</span>
-                            <a href="tel:09110501995"
-                                style="color: white; font-weight: 600; font-size: 1.1rem; text-decoration: none;">08165625614</a>
+                            <a href="tel:09112345678"
+                                style="color: white; font-weight: 600; font-size: 1.1rem; text-decoration: none;">09112345678</a>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@
                         </div>
                         <div>
                             <span style="display: block; opacity: 0.8; font-size: 0.9rem;">WhatsApp Support</span>
-                            <a href="https://wa.me/2348165625614" target="_blank"
+                            <a href="https://wa.me/2347036826500" target="_blank"
                                 style="color: white; font-weight: 600; font-size: 1.1rem; text-decoration: none;">Chat
                                 Now</a>
                         </div>
@@ -57,19 +57,18 @@
                         </div>
                         <div>
                             <span style="display: block; opacity: 0.8; font-size: 0.9rem;">Visit Us</span>
-                            <span style="color: white; font-weight: 600; font-size: 1rem;">No 5 Adamawa state yola
-                                beside gombi road Adamawa Nigeria
+                            <span style="color: white; font-weight: 600; font-size: 1rem;">Tudun Wada Street, Gwammaja, Kano
                             </span>
                         </div>
                     </div>
 
                     <div class="social-links pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
-                        <a href="#" style="color: white; margin-right: 20px; font-size: 1.2rem;"><i
+                        <a href="https://www.facebook.com/katsinanews?mibextid=ZbWKwL" style="color: white; margin-right: 20px; font-size: 1.2rem;"><i
                                 class="fab fa-facebook-f"></i></a>
                         <a href="#" style="color: white; margin-right: 20px; font-size: 1.2rem;"><i
                                 class="fab fa-twitter"></i></a>
-                        <a href="#" style="color: white; margin-right: 20px; font-size: 1.2rem;"><i
-                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@safana?_r=1&_t=ZS-93SEZ246vAm" style="color: white; margin-right: 20px; font-size: 1.2rem;"><i
+                                class="fab fa-tiktok"></i></a>
                         <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -126,13 +125,13 @@
         }
 
         .form-control-custom:focus {
-            border-color: #FF13F0;
+            border-color: #002fba;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 19, 240, 0.1);
+            box-shadow: 0 0 0 3px rgba(0, 47, 186, 0.1);
         }
 
         .btn-primary-custom {
-            background: #FF13F0;
+            background: #002fba;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -145,9 +144,9 @@
         }
 
         .btn-primary-custom:hover {
-            background: #FF13F0;
+            background: #002fba;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 19, 240, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 47, 186, 0.3);
         }
     </style>
 </section>

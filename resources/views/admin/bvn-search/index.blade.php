@@ -1,5 +1,5 @@
 <x-app-layout>
- <title>Zaid verify - BVN Search</title>
+ <title>Digital Verify Sub - BVN Search</title>
       <div class="page-body">
     <div class="container-fluid">
       <div class="page-title">
@@ -371,7 +371,7 @@
                 
                 Swal.fire({
                     title: 'Syncing Status...',
-                    text: 'Fetching latest information from Arewa Smart.',
+                    text: 'Fetching latest information from Digital Verify Sub.',
                     allowOutsideClick: false,
                     didOpen: () => {
                         Swal.showLoading();

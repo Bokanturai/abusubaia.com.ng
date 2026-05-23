@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - User Management</title>
+    <title>Digital Verify Sub - User Management</title>
 
     <div class="content">
 

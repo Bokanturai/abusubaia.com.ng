@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - NIN Personalisation details</title>
+    <title>Digital Verify Sub - NIN Personalisation details</title>
 
     <div class="content">
         <div class="row mb-4">

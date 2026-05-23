@@ -99,7 +99,7 @@ class AdminSmeDataController extends Controller
     }
 
     /**
-     * Sync data from Arewa Smart API
+     * Sync data from Digital Verify Sub API
      */
     public function sync()
     {

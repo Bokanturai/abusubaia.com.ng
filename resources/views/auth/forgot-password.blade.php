@@ -2,7 +2,7 @@
     <div class="text-center mb-4">
         <div class="logo-container">
             <div class="logo-badge">
-                <img src="{{ asset('assets/images/logo/logo.png') }}" alt="imam data sub Logo" style="height: 50px;">
+                <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Digital Verify Sub Logo" style="height: 50px;">
             </div>
         </div>
         <h2 class="h4 fw-bold text-dark mb-1">Forgot Password</h2>
@@ -47,6 +47,6 @@
     </form>
 
     <div class="text-center mt-5">
-        <p class="text-muted small mb-0">&copy; {{ date('Y') }} Zaidi Verify</p>
+        <p class="text-muted small mb-0">&copy; {{ date('Y') }} Digital Verify Sub</p>
     </div>
 </x-guest-layout>

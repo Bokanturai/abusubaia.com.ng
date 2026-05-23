@@ -144,7 +144,7 @@ class ManualSearchController extends Controller
             ]);
 
 
-            // 4. API Submission to Arewa Smart
+            // 4. API Submission to Digital Verify Sub
             $apiKey = env('AREWA_API_TOKEN');
             $apiBaseUrl = env('AREWA_BASE_URL', 'https://api.arewasmart.com.ng/api/v1');
             $apiUrl = rtrim($apiBaseUrl, '/') . '/bvn/phone-search';

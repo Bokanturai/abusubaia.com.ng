@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - Data Variations Management</title>
+    <title>Digital Verify Sub - Data Variations Management</title>
 
     <div class="content">
         <!-- Page Header -->

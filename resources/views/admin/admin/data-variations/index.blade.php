@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Imam Data Sub - Data Services Management</title>
+    <title>Digital Verify Sub - Data Services Management</title>
 
     <div class="content">
         <!-- Page Header -->

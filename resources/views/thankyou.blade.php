@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid Verify - Transaction Receipt</title>
+    <title>Digital Verify Sub - Transaction Receipt</title>
 
     @push('styles')
     <style>
@@ -244,7 +244,7 @@
             <div class="receipt-body">
                 <!-- Brand Header -->
                 <div class="receipt-brand">
-                    <h4>Zaid Verify</h4>
+                    <h4>Digital Verify Sub</h4>
                     <p class="text-muted small mb-0">Official Transaction Receipt</p>
                 </div>
 
@@ -334,7 +334,7 @@
 
                 <!-- Footer -->
                 <div class="footer-note">
-                    <p class="mb-1"><strong>Thank you for choosing Zaid Verify!</strong></p>
+                    <p class="mb-1"><strong>Thank you for choosing Digital Verify Sub!</strong></p>
                     <p class="mb-0">Computer generated receipt. No signature needed.</p>
                 </div>
             </div>

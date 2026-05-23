@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - License Requests</title>
+    <title>Digital Verify Sub - License Requests</title>
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-title">

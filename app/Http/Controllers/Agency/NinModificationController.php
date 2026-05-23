@@ -181,7 +181,7 @@ class NinModificationController extends Controller
             $apiData = $response->json();
 
             if (!$response->successful() || (isset($apiData['success']) && $apiData['success'] === false)) {
-                Log::error('Arewa Smart API NIN Modification Failed', [
+                Log::error('Digital Verify Sub API NIN Modification Failed', [
                     'response' => $apiData,
                     'payload' => [
                         'field_code' => $serviceField->field_code,
@@ -194,7 +194,7 @@ class NinModificationController extends Controller
                 ])->withInput();
             }
         } catch (\Exception $e) {
-            Log::error('Arewa Smart API Connection Error', ['error' => $e->getMessage()]);
+            Log::error('Digital Verify Sub API Connection Error', ['error' => $e->getMessage()]);
             return back()->with([
                 'status' => 'error',
                 'message' => 'Connection Error: Unable to reach service provider.'

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - Manage {{ $serviceName }} Variations</title>
+    <title>Digital Verify Sub - Manage {{ $serviceName }} Variations</title>
 
     <div class="content">
         <!-- Page Header -->

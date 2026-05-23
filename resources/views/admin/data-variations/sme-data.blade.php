@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - SME Data Management</title>
+    <title>Digital Verify Sub - SME Data Management</title>
 
     <div class="content">
         <!-- Page Header -->

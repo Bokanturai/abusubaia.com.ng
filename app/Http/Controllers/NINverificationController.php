@@ -149,7 +149,7 @@ class NINverificationController extends Controller
                 ]);
             }
 
-            // Arewa Smart API usually returns success in 'status' field
+            // Digital Verify Sub API usually returns success in 'status' field
             $status = $decodedData['status'] ?? 'UNKNOWN';
 
             if ($status === 'success') {

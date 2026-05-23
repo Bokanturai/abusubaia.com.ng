@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Arewa Smart - {{ $title ?? 'Search BVN by Phone' }}</title>
+    <title>Digital Verify Sub - {{ $title ?? 'Search BVN by Phone' }}</title>
 
     <div class="page-body">
         <div class="container-fluid">

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Imam Data Sub - CRM Service</title>
+    <title>Digital Verify Sub - CRM Service</title>
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-title">

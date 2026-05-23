@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Zaid verify - Bvn search details</title>
+    <title>Digital Verify Sub - Bvn search details</title>
 
     <div class="content">
         <div class="row mb-4">
@@ -386,7 +386,7 @@
             
             Swal.fire({
                 title: 'Checking Status...',
-                text: 'Please wait while we fetch the latest status from Arewa Smart.',
+                text: 'Please wait while we fetch the latest status from Digital Verify Sub.',
                 allowOutsideClick: false,
                 didOpen: () => {
                     Swal.showLoading();
