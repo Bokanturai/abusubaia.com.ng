@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - {{ $title ?? 'CRM Request Form' }}</title>
+    <title>Abu subaia verification - {{ $title ?? 'CRM Request Form' }}</title>
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-title mb-3">

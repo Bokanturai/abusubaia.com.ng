@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - License Requests</title>
+    <title>Abu subaia verification - License Requests</title>
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-title">

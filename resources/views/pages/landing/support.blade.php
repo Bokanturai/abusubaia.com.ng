@@ -3,15 +3,15 @@
     style="padding: 100px 0; background: #fff; position: relative; overflow: hidden;">
     <!-- Decorative Circle -->
     <div
-        style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(0, 47, 186, 0.1); border-radius: 50%;">
+        style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(66, 81, 124, 0.1); border-radius: 50%;">
     </div>
 
     <div class="container px-0 px-md-3">
         <div class="section-title text-center mb-5" data-aos="fade-up">
-            <h4 style="color: #002fba; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Get In Touch
+            <h4 style="color: #42517c; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Get In Touch
             </h4>
             <h2 style="color: #111827; font-weight: 800; font-size: 2.5rem;">We're Here to Help</h2>
-            <hr style="width: 60px; height: 3px; background: #002fba; margin: 15px auto; border: none;">
+            <hr style="width: 60px; height: 3px; background: #42517c; margin: 15px auto; border: none;">
             <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
                 Our expert team is available 24/7 to assist you. Reach out via phone, WhatsApp, or drop us a message
                 below.
@@ -22,7 +22,7 @@
             <!-- Support Info -->
             <div class="col-12 col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
                 <div class="support-info-card rounded-0 rounded-md-4"
-                    style="background: linear-gradient(135deg, #002fba 0%, #0047e1 100%); padding: 40px; color: white; box-shadow: 0 20px 40px rgba(0, 47, 186, 0.3);">
+                    style="background: linear-gradient(135deg, #42517c 0%, #0047e1 100%); padding: 40px; color: white; box-shadow: 0 20px 40px rgba(66, 81, 124, 0.3);">
                     <h3 style="font-weight: 700; margin-bottom: 30px;">Contact Information</h3>
 
                     <div class="d-flex align-items-center mb-4">
@@ -125,13 +125,13 @@
         }
 
         .form-control-custom:focus {
-            border-color: #002fba;
+            border-color: #42517c;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(0, 47, 186, 0.1);
+            box-shadow: 0 0 0 3px rgba(66, 81, 124, 0.1);
         }
 
         .btn-primary-custom {
-            background: #002fba;
+            background: #42517c;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -144,9 +144,9 @@
         }
 
         .btn-primary-custom:hover {
-            background: #002fba;
+            background: #42517c;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 47, 186, 0.3);
+            box-shadow: 0 5px 15px rgba(66, 81, 124, 0.3);
         }
     </style>
 </section>

@@ -1,5 +1,5 @@
 <x-app-layout>
-   <title>Digital Verify Sub - Vnin to nibss</title>
+   <title>Abu subaia verification - Vnin to nibss</title>
       <div class="page-body">
     <div class="container-fluid">
       <div class="page-title">

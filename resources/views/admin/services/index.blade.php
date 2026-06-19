@@ -1,5 +1,5 @@
 <x-app-layout>
-      <title>Digital Verify Sub - Services Management</title>
+      <title>Abu subaia verification - Services Management</title>
 
     <div class="content">
         <!-- Page Header -->

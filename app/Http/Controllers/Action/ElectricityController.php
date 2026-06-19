@@ -200,7 +200,7 @@ class ElectricityController extends Controller
             return redirect()->back()->with('error', 'Insufficient wallet balance! You need ₦' . number_format($payableAmount, 2));
         }
 
-        // 5. Call Digital Verify Sub Electricity API
+        // 5. Call Abu subaia verification Electricity API
         try {
             $response = Http::withHeaders([
                 'Authorization' => 'Bearer ' . $this->getApiToken(),

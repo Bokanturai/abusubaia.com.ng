@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - {{ $title ?? 'Dashboard' }}</title>
+    <title>Abu subaia verification - {{ $title ?? 'Dashboard' }}</title>
 
     <!-- Announcement Banner -->
     @if(isset($announcement) && $announcement)

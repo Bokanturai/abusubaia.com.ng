@@ -1,5 +1,5 @@
 <x-app-layout>
- <title>Digital Verify Sub</title>
+ <title>Abu subaia verification</title>
 
     <div class="container-fluid py-4 px-md-4">
         <!-- Page Header -->

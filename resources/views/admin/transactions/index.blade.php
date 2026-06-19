@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - Transactions</title>
+    <title>Abu subaia verification - Transactions</title>
 
     <div class="content">
         <!-- Stats Cards -->

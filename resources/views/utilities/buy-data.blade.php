@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - {{ $title ?? 'Buy Data' }}</title>
+    <title>Abu subaia verification - {{ $title ?? 'Buy Data' }}</title>
 
     <div class="row">
         <div class="col-xxl-12 col-xl-12">

@@ -1,5 +1,5 @@
 <x-app-layout>
- <title>Digital Verify Sub - {{ $title ?? 'Wallet Funding' }}</title>
+ <title>Abu subaia verification - {{ $title ?? 'Wallet Funding' }}</title>
 
     <div class="container-fluid py-4 px-0 px-md-4">
         <!-- Page Header -->

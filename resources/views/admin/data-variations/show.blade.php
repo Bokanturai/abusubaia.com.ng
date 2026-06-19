@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - Manage {{ $serviceName }} Variations</title>
+    <title>Abu subaia verification - Manage {{ $serviceName }} Variations</title>
 
     <div class="content">
         <!-- Page Header -->

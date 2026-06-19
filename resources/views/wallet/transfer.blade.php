@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - P2P Balance Transfer</title>
+    <title>Abu subaia verification - P2P Balance Transfer</title>
 
     <div class="container-fluid py-4 px-0 px-md-4">
         <!-- Page Header -->

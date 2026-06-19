@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - {{ $title ?? 'Suspension NIN' }}</title>
+    <title>Abu subaia verification - {{ $title ?? 'Suspension NIN' }}</title>
 
     <div class="page-body">
         <div class="container-fluid">

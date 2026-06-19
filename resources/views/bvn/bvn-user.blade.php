@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - {{ $title ?? 'BVN Enrolment Agent' }}</title>
+    <title>Abu subaia verification - {{ $title ?? 'BVN Enrolment Agent' }}</title>
 
     <div class="page-body">
         <div class="container-fluid">
@@ -23,7 +23,7 @@
                             <h5 class="mb-0 fw-bold">
                                 <i class="bi bi-person-badge me-2"></i>BVN Enrolment Form
                             </h5>
-                            <span class="badge bg-light text-primary fw-semibold">Digital Verify Sub</span>
+                            <span class="badge bg-light text-primary fw-semibold">Abu subaia verification</span>
                         </div>
 
                         <div class="card-body">
@@ -73,7 +73,7 @@
                     <div class="card shadow-sm border-0 rounded-3 h-100">
                         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                             <h5 class="mb-0 fw-bold"><i class="bi bi-clock-history me-2"></i>User Request History</h5>
-                            <span class="badge bg-light text-primary fw-semibold">Digital Verify Sub</span>
+                            <span class="badge bg-light text-primary fw-semibold">Abu subaia verification</span>
                         </div>
                         <div class="card-body">
 

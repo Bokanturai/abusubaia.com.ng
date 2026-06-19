@@ -149,7 +149,7 @@ class NINverificationController extends Controller
                 ]);
             }
 
-            // Digital Verify Sub API usually returns success in 'status' field
+            // Abu subaia verification API usually returns success in 'status' field
             $status = $decodedData['status'] ?? 'UNKNOWN';
 
             if ($status === 'success') {

@@ -99,7 +99,7 @@ class AdminSmeDataController extends Controller
     }
 
     /**
-     * Sync data from Digital Verify Sub API
+     * Sync data from Abu subaia verification API
      */
     public function sync()
     {

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - License Details</title>
+    <title>Abu subaia verification - License Details</title>
 
     <div class="content p-4">
         <div class="row mb-4">

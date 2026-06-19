@@ -1,5 +1,5 @@
 <x-app-layout>
-    @section('title', 'Digital Verify Sub - Bulk Wallet Action')
+    @section('title', 'Abu subaia verification - Bulk Wallet Action')
 
     <div class="content">
         {{-- Success Message --}}

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - Pay Electricity Bill</title>
+    <title>Abu subaia verification - Pay Electricity Bill</title>
 
     <div class="row">
         <div class="col-xxl-12 col-xl-12">

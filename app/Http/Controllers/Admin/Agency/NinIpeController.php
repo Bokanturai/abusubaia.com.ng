@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Log;
 class NinIpeController extends Controller
 {
     /**
-     * Check status of a nin_ipe request using Digital Verify Sub API
+     * Check status of a nin_ipe request using Abu subaia verification API
      */
     public function checkStatus($id)
     {

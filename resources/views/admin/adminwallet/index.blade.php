@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - Wallet Management</title>
+    <title>Abu subaia verification - Wallet Management</title>
 
     <div class="content">
         {{-- Alerts --}}

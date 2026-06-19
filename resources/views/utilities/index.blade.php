@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - {{ $title ?? 'Buy Airtime' }}</title>
+    <title>Abu subaia verification - {{ $title ?? 'Buy Airtime' }}</title>
     {{-- Custom CSS for active state --}}
     @push('styles')
     <style>

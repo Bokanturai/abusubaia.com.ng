@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub Smart User</title>
+    <title>Abu subaia verification Smart User</title>
 
     <div class="page">
         <div class="main-content app-content custom-margin-top">

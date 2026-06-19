@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - {{ $title ?? 'VNIN TO NIBSS Request Form' }}</title>
+    <title>Abu subaia verification - {{ $title ?? 'VNIN TO NIBSS Request Form' }}</title>
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-title mb-3">

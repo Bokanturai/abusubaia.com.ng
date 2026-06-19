@@ -1,5 +1,5 @@
 <x-app-layout>
-    @section('title', 'Digital Verify Sub - Fund/Debit User')
+    @section('title', 'Abu subaia verification - Fund/Debit User')
 
     <div class="content">
         {{-- Success Message --}}

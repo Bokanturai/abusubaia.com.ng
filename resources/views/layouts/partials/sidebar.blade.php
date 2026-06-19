@@ -3,13 +3,13 @@
     <!-- Logo -->
     <div class="sidebar-logo">
         <a href="{{ route('dashboard') }}" class="logo logo-normal">
-            <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo" style="height: 35px;">
+            <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo" style="height: 35px;">
         </a>
         <a href="{{ route('dashboard') }}" class="logo-small">
-            <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo" style="height: 25px;">
+            <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo" style="height: 25px;">
         </a>
         <a href="{{ route('dashboard') }}" class="dark-logo">
-            <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo" style="height: 35px;">
+            <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo" style="height: 35px;">
         </a>
     </div>
     <!-- /Logo -->
@@ -343,13 +343,13 @@
 
     .sidebar-menu li a:hover {
         background: rgba(255, 19, 240, 0.05);
-        color: #002fba;
+        color: #42517c;
     }
 
     /* Active Menu Item */
     .sidebar-menu li.active>a,
     .sidebar-menu li a.active {
-        background: #002fba !important;
+        background: #42517c !important;
         color: #ffffff !important;
         box-shadow: 0 4px 12px rgba(255, 19, 240, 0.15);
     }
@@ -381,7 +381,7 @@
     }
 
     .sidebar-menu .submenu ul li a:hover {
-        color: #002fba;
+        color: #42517c;
         background: transparent;
         text-decoration: underline;
     }
@@ -407,7 +407,7 @@
             text: "You will be logged out of your account.",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#002fba',
+            confirmButtonColor: '#42517c',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, logout!',
             cancelButtonText: 'Cancel'

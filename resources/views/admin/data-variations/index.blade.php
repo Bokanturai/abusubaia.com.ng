@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - Data Variations Management</title>
+    <title>Abu subaia verification - Data Variations Management</title>
 
     <div class="content">
         <!-- Page Header -->

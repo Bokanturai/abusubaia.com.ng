@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - NIN - Modification</title>
+    <title>Abu subaia verification - NIN - Modification</title>
     <div class="page-body">
         <div class="container-fluid">
             <div class="page-title">
@@ -393,7 +393,7 @@
                 
                 Swal.fire({
                     title: 'Syncing Status...',
-                    text: 'Fetching latest information from Digital Verify Sub.',
+                    text: 'Fetching latest information from Abu subaia verification.',
                     allowOutsideClick: false,
                     didOpen: () => {
                         Swal.showLoading();

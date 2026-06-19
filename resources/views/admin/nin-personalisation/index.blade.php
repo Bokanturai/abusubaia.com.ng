@@ -1,5 +1,5 @@
 <x-app-layout>
- <title>Digital Verify Sub - NIN Personalisation</title>
+ <title>Abu subaia verification - NIN Personalisation</title>
       <div class="page-body">
     <div class="container-fluid">
       <div class="page-title">

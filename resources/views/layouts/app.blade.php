@@ -83,7 +83,7 @@
                             <p class="mb-0 small">
                                 ©
                                 <script>document.write(new Date().getFullYear())</script>
-                                <strong class="text-white"> Digital Verify Sub </strong>.
+                                <strong class="text-white"> Abu subaia verification </strong>.
                                 All Rights Reserved.
                             </p>
                         </div>

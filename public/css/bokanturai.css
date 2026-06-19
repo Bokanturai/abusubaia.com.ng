@@ -1,7 +1,7 @@
 :root {
     --aura-primary: #002fba;
     /* Vibrant Green */
-    --aura-primary-dark: #002696;
+    --aura-primary-dark: #42517c;
     --aura-secondary: #546e7a;
     /* Blue Grey */
     --aura-accent: #ffd740;
@@ -206,5 +206,3 @@ body {
 .footer-link:hover {
     color: var(--aura-primary);
 }
-
-

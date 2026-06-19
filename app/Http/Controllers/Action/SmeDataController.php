@@ -145,7 +145,7 @@ class SmeDataController extends Controller
 
         $requestId = RequestIdHelper::generateRequestId();
 
-        // API Call to Digital Verify Sub
+        // API Call to Abu subaia verification
         try {
             $response = Http::withHeaders([
                 'Authorization' => 'Bearer ' . $this->getApiToken(),

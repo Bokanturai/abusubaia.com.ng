@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Http;
 class NINmodController extends Controller
 {
     /**
-     * Check status of a nin_modification using Digital Verify Sub API
+     * Check status of a nin_modification using Abu subaia verification API
      */
     public function checkStatus($id)
     {

@@ -78,8 +78,14 @@ class signatureHelper
         $publicKey = self::validate_rsa_key($public_key, 'public');
         // Calculate the MD5 of the notification payload without the sign field. The param_sort function removes the sign field.
         $md5 = strtoupper(md5(self::params_sort($data)));
+        
+        $rawSignature = urldecode($signature);
+        // If urldecode or prior decoding turned '+' into ' ', convert it back to '+'
+        $base64 = str_replace(' ', '+', $rawSignature);
+        $decodedSignature = base64_decode($base64);
+
         // Verify the signature using the public key and SHA-1 algorithm
-        $is_verified = openssl_verify($md5, base64_decode(urldecode($signature)), $publicKey, OPENSSL_ALGO_SHA1);
+        $is_verified = openssl_verify($md5, $decodedSignature, $publicKey, OPENSSL_ALGO_SHA1);
 
         return $is_verified;
     }

@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Log;
 class ValidationController extends Controller
 {
     /**
-     * Check status of a validation request using Digital Verify Sub API
+     * Check status of a validation request using Abu subaia verification API
      */
     public function checkStatus($id)
     {

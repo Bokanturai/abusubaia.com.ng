@@ -4,7 +4,7 @@
         <!-- Header Left - Logo -->
         <div class="header-left">
             <a href="{{ route('dashboard') }}" class="logo">
-                <img src="{{ asset('assets/images/logo/favicon.png') }}" alt="Logo" style="height: 35px; width: auto;">
+                <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo" style="height: 35px; width: auto;">
             </a>
         </div>
 

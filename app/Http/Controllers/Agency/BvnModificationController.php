@@ -157,7 +157,7 @@ class BvnModificationController extends Controller
             // Debit wallet
             $wallet->decrement('balance', $totalAmount);
 
-            // API Call to Digital Verify Sub
+            // API Call to Abu subaia verification
             $apiKey = env('AREWA_API_TOKEN');
             $apiBaseUrl = env('AREWA_BASE_URL');
             $apiUrl = rtrim($apiBaseUrl, '/') . '/bvn/modification';
@@ -188,7 +188,7 @@ class BvnModificationController extends Controller
                 $apiData = $response->json();
 
                 if (!$response->successful() || (isset($apiData['success']) && $apiData['success'] === false)) {
-                    Log::error('Digital Verify Sub API BVN Modification Failed', [
+                    Log::error('Abu subaia verification API BVN Modification Failed', [
                         'response' => $apiData,
                         'payload' => [
                             'field_code' => $serviceField->field_code,
@@ -199,7 +199,7 @@ class BvnModificationController extends Controller
                     throw new \Exception('API Submission Failed: ' . ($apiData['message'] ?? 'Unknown API error.'));
                 }
             } catch (\Exception $e) {
-                Log::error('Digital Verify Sub API Connection Error', ['error' => $e->getMessage()]);
+                Log::error('Abu subaia verification API Connection Error', ['error' => $e->getMessage()]);
                 throw $e;
             }
 

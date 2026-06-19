@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - SME Data Plans</title>
+    <title>Abu subaia verification - SME Data Plans</title>
 
     <div class="row">
         <div class="col-xxl-12 col-xl-12">

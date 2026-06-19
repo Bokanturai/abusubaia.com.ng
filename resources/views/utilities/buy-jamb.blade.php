@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Digital Verify Sub - Buy JAMB PIN</title>
+    <title>Abu subaia verification - Buy JAMB PIN</title>
 
     <div class="row">
         <div class="col-xxl-12 col-xl-12">

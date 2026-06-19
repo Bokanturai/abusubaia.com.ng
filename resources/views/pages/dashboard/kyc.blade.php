@@ -11,7 +11,7 @@
 					<div class="avatar avatar-lg mb-3">
 						<i class="fas fa-user-circle fa-3x text-primary"></i>
 					</div>
-					<h6 class="fw-bold">Welcome to Digital Verify Sub! 🎉</h6>
+					<h6 class="fw-bold">Welcome to Abu subaia verification! 🎉</h6>
 					<p class="text-muted small">Please complete your profile to access all features</p>
 				</div>
                 
