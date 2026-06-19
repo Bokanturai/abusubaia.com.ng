@@ -274,17 +274,17 @@
                         <li style="margin-bottom: 20px; display: flex;">
                             <div style="width: 30px; color: #42517c; margin-top: 2px;"><i
                                     class="fas fa-map-marker-alt"></i></div>
-                            <span style="color: rgba(255,255,255,0.8);">Tudun Wada Street, Gwammaja, Kano</span>
+                            <span style="color: rgba(255,255,255,0.8);">Iware, Ardo-Kola LGA, Taraba State</span>
                         </li>
                         <li style="margin-bottom: 20px; display: flex;">
                             <div style="width: 30px; color: #42517c; margin-top: 2px;"><i class="fas fa-phone"></i>
                             </div>
-                            <span style="color: rgba(255,255,255,0.8);">09112345678</span>
+                            <span style="color: rgba(255,255,255,0.8);">07066649879</span>
                         </li>
                         <li style="margin-bottom: 20px; display: flex;">
                             <div style="width: 30px; color: #42517c; margin-top: 2px;"><i class="fas fa-envelope"></i>
                             </div>
-                            <span style="color: rgba(255,255,255,0.8);">safanane@gmail.com</span>
+                            <span style="color: rgba(255,255,255,0.8);">nafiuayuba9879@gmail.com</span>
                         </li>
                     </ul>
                 </div>
@@ -378,7 +378,7 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/2347036826500" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <a href="https://wa.me/2347066649879" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
     <script src="{{ asset('assets/js/landing.js') }}"></script>

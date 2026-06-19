@@ -32,8 +32,8 @@
                         </div>
                         <div>
                             <span style="display: block; opacity: 0.8; font-size: 0.9rem;">Call Us</span>
-                            <a href="tel:09112345678"
-                                style="color: white; font-weight: 600; font-size: 1.1rem; text-decoration: none;">09112345678</a>
+                            <a href="tel:07066649879"
+                                style="color: white; font-weight: 600; font-size: 1.1rem; text-decoration: none;">07066649879</a>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@
                         </div>
                         <div>
                             <span style="display: block; opacity: 0.8; font-size: 0.9rem;">WhatsApp Support</span>
-                            <a href="https://wa.me/2347036826500" target="_blank"
+                            <a href="https://wa.me/2347066649879" target="_blank"
                                 style="color: white; font-weight: 600; font-size: 1.1rem; text-decoration: none;">Chat
                                 Now</a>
                         </div>
@@ -57,7 +57,7 @@
                         </div>
                         <div>
                             <span style="display: block; opacity: 0.8; font-size: 0.9rem;">Visit Us</span>
-                            <span style="color: white; font-weight: 600; font-size: 1rem;">Tudun Wada Street, Gwammaja, Kano
+                            <span style="color: white; font-weight: 600; font-size: 1rem;">Iware, Ardo-Kola LGA, Taraba State
                             </span>
                         </div>
                     </div>

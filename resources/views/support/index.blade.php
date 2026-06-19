@@ -30,7 +30,7 @@
 
                             <div class="d-grid gap-3">
                                 <!-- WhatsApp -->
-                                <a href="https://wa.me/09112345678" target="_blank"
+                                <a href="https://wa.me/2347066649879" target="_blank"
                                     class="btn btn-outline-success border-2 fw-semibold d-flex align-items-center justify-content-center py-2">
                                     <i class="bi bi-whatsapp fs-5 me-2"></i> WhatsApp
                                 </a>
@@ -57,7 +57,7 @@
                             <div class="mt-4 p-3 bg-light rounded-3 border">
                                 <h6 class="fw-bold text-primary mb-2"><i class="bi bi-envelope me-2"></i>Email Support
                                 </h6>
-                                <p class="small text-muted mb-0">safanane@gmail.com</p>
+                                <p class="small text-muted mb-0">nafiuayuba9879@gmail.com</p>
                             </div>
                         </div>
                     </div>
