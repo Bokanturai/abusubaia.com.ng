@@ -29,29 +29,20 @@ class VirtualAccountRepository
                 $accountReference = "F24" . strtoupper(bin2hex(random_bytes(5)));
 
                 $data = [
-                    'merchantId'         => env('MERCHANTID'),
-                    'requestTime'        => $requestTime,
-                    'nonceStr'           => $noncestr,
-                    'version'            => env('VERSION'),
-                    'accountReference'   => $accountReference,
-                    'identityType'       => 'personal',
-                    'licenseNumber'      => $userDetails->bvn,
+                    'requestTime' => $requestTime,
+                    'identityType' => 'personal',
+                    'licenseNumber' =>  $userDetails->bvn,
                     'virtualAccountName' => $customer_name,
-                    'customerName'       => $customer_name,
-                    'email'              => $userDetails->email,
+                    'version' => env('VERSION'),
+                    'customerName' => $customer_name,
+                    'email' => $userDetails->email,
+                    'accountReference' => $accountReference,
+                    'nonceStr' => $noncestr,
                 ];
 
-                // Log the raw payload (before signing) for debugging
-                Log::info('PalmPay VA request payload', $data);
-
-                // Log the exact string that will be signed (sorted key=value pairs)
-                $signString = \App\Helpers\signatureHelper::params_sort($data);
-                Log::info('PalmPay string-to-sign', ['string' => $signString]);
+                 Log::info($data); 
 
                 $signature = signatureHelper::generate_signature($data, config('keys.private'));
-
-                // Debug: log the generated signature to confirm it is non-empty
-                Log::info('PalmPay signature generated', ['signature_length' => strlen($signature), 'signature' => $signature]);
 
                 $url = env('BASE_URL_PALMPAY') . 'api/v2/virtual/account/label/create';
                 $token = env('BEARER_TOKEN');
@@ -73,15 +64,8 @@ class VirtualAccountRepository
                 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
                 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 
-                // Disable SSL verification in local/dev environment only
-                if (app()->environment('local')) {
-                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-                }
-
                 // Execute request
                 $response = curl_exec($ch);
-
 
                 Log::info($response);         
                 // Check for cURL errors

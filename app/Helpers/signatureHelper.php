@@ -31,7 +31,7 @@ class signatureHelper
      */
     public static function params_sort(array $data): string
     {
-        // Filter out null and empty-string values — PalmPay ignores those fields on their end
+        // Filter empty string from the array
         $filtered_data = array_filter($data, function ($value) {
             return $value !== '' && $value !== null;
         });
@@ -42,8 +42,12 @@ class signatureHelper
         // Remove the sign key if it exists
         unset($filtered_data['sign']);
 
-        // Build and return the query string
-        return urldecode(http_build_query($filtered_data));
+        $pairs = [];
+        foreach ($filtered_data as $key => $value) {
+            $pairs[] = "$key=$value";
+        }
+
+        return implode('&', $pairs);
     }
 
     /**
@@ -76,18 +80,29 @@ class signatureHelper
     {
         // Retrieve the public key resource
         $publicKey = self::validate_rsa_key($public_key, 'public');
-        // Calculate the MD5 of the notification payload without the sign field. The param_sort function removes the sign field.
-        $md5 = strtoupper(md5(self::params_sort($data)));
         
-        $rawSignature = urldecode($signature);
-        // If urldecode or prior decoding turned '+' into ' ', convert it back to '+'
-        $base64 = str_replace(' ', '+', $rawSignature);
-        $decodedSignature = base64_decode($base64);
+        // Build the signing string and calculate MD5
+        $paramsString = self::params_sort($data);
+        $md5 = strtoupper(md5($paramsString));
+        
+        // Safely handle signature encoding
+        // If it contains '%', it's likely URL-encoded. If not, treat as plain base64.
+        $rawSignature = str_contains($signature, '%') ? urldecode($signature) : $signature;
+        $decodedSig = base64_decode($rawSignature);
 
         // Verify the signature using the public key and SHA-1 algorithm
-        $is_verified = openssl_verify($md5, $decodedSignature, $publicKey, OPENSSL_ALGO_SHA1);
+        $is_verified = openssl_verify($md5, $decodedSig, $publicKey, OPENSSL_ALGO_SHA1);
 
-        return $is_verified;
+        if ($is_verified !== 1) {
+            \Illuminate\Support\Facades\Log::error('Palmpay Signature Verification Failed', [
+                'built_string' => $paramsString,
+                'md5_hash' => $md5,
+                'signature_received' => $signature,
+                'openssl_error' => openssl_error_string()
+            ]);
+        }
+
+        return $is_verified === 1;
     }
 
     /**
@@ -99,34 +114,22 @@ class signatureHelper
      */
     public static function validate_rsa_key($value, $key_type)
     {
-        // Remove all whitespace (spaces, newlines, tabs) from the raw key string
-        $formatted_key = preg_replace('/\s+/', '', $value);
+        // Remove spaces from the private key
+        $formatted_key = str_replace(' ', '', $value);
 
-        // Split into 64-character chunks with newline breaks (standard PEM line length)
+        // Remove trailing spaces from the private key
+        $formatted_key = trim($formatted_key);
+
+        // Split the key into chunks of 64 characters with newline breaks
         $formatted_key = chunk_split($formatted_key, 64, "\n");
 
+        // Add appropriate header and footer based on key type
         if ($key_type === 'private') {
-            // Try PKCS#8 format first ("BEGIN PRIVATE KEY") — used when the raw key
-            // base64 decodes to a PKCS#8 DER structure (starts with MIICd, MIIEv, etc.)
-            $pkcs8_pem = "-----BEGIN PRIVATE KEY-----\n{$formatted_key}-----END PRIVATE KEY-----\n";
-            $key_resource = openssl_pkey_get_private($pkcs8_pem);
-
-            if (!$key_resource) {
-                // Fall back to PKCS#1 format ("BEGIN RSA PRIVATE KEY")
-                $pkcs1_pem = "-----BEGIN RSA PRIVATE KEY-----\n{$formatted_key}-----END RSA PRIVATE KEY-----\n";
-                $key_resource = openssl_pkey_get_private($pkcs1_pem);
-            }
-
-            if (!$key_resource) {
-                \Illuminate\Support\Facades\Log::error('signatureHelper: Failed to load private key. Check that config/keys.php contains a valid PKCS#8 or PKCS#1 private key.');
-            }
+            $pem_formatted_key = "-----BEGIN RSA PRIVATE KEY-----\n$formatted_key-----END RSA PRIVATE KEY-----\n";
+            $key_resource = openssl_pkey_get_private($pem_formatted_key);
         } else {
-            $pem_formatted_key = "-----BEGIN PUBLIC KEY-----\n{$formatted_key}-----END PUBLIC KEY-----\n";
+            $pem_formatted_key = "-----BEGIN PUBLIC KEY-----\n$formatted_key-----END PUBLIC KEY-----\n";
             $key_resource = openssl_pkey_get_public($pem_formatted_key);
-
-            if (!$key_resource) {
-                \Illuminate\Support\Facades\Log::error('signatureHelper: Failed to load public key. Check that config/keys.php contains a valid public key.');
-            }
         }
 
         return $key_resource;
