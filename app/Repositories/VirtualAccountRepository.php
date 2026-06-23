@@ -44,8 +44,10 @@ class VirtualAccountRepository
 
                 $signature = signatureHelper::generate_signature($data, config('keys.private'));
 
-                $baseUrl = env('BASE_URL_PALMPAY') ?: env('BASE_URL3') ?: 'https://open-gw-prod.palmpay-inc.com/';
-                $url = rtrim($baseUrl, '/') . '/api/v2/virtual/account/label/create';
+                // Debug: log the generated signature to confirm it is non-empty
+                Log::info('PalmPay signature generated', ['signature_length' => strlen($signature), 'signature' => $signature]);
+
+                $url = env('BASE_URL_PALMPAY') . 'api/v2/virtual/account/label/create';
                 $token = env('BEARER_TOKEN');
                 $headers = [
                     'Accept: application/json, text/plain, */*',
@@ -65,8 +67,15 @@ class VirtualAccountRepository
                 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
                 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 
+                // Disable SSL verification in local/dev environment only
+                if (app()->environment('local')) {
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+                }
+
                 // Execute request
                 $response = curl_exec($ch);
+
 
                 Log::info($response);         
                 // Check for cURL errors
@@ -100,10 +109,6 @@ class VirtualAccountRepository
                     ]);
 
                       return ['success' => true, 'message' => 'Virtual Account Created'];
-                } else {
-                    $errorMsg = $response['respMsg'] ?? 'Unknown error response from PalmPay';
-                    Log::error("PalmPay virtual account creation failed: Code: " . ($response['respCode'] ?? 'None') . ", Message: " . $errorMsg);
-                    return ['success' => false, 'message' => $errorMsg];
                 }
             } catch (\Exception $e) {
                 Log::error('Error creating virtual account for user ' . $loginUserId . ': ' . $e->getMessage());

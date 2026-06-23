@@ -99,22 +99,34 @@ class signatureHelper
      */
     public static function validate_rsa_key($value, $key_type)
     {
-        // Remove spaces from the private key
-        $formatted_key = str_replace(' ', '', $value);
+        // Remove all whitespace (spaces, newlines, tabs) from the raw key string
+        $formatted_key = preg_replace('/\s+/', '', $value);
 
-        // Remove trailing spaces from the private key
-        $formatted_key = trim($formatted_key);
-
-        // Split the key into chunks of 64 characters with newline breaks
+        // Split into 64-character chunks with newline breaks (standard PEM line length)
         $formatted_key = chunk_split($formatted_key, 64, "\n");
 
-        // Add appropriate header and footer based on key type
         if ($key_type === 'private') {
-            $pem_formatted_key = "-----BEGIN RSA PRIVATE KEY-----\n$formatted_key-----END RSA PRIVATE KEY-----\n";
-            $key_resource = openssl_pkey_get_private($pem_formatted_key);
+            // Try PKCS#8 format first ("BEGIN PRIVATE KEY") — used when the raw key
+            // base64 decodes to a PKCS#8 DER structure (starts with MIICd, MIIEv, etc.)
+            $pkcs8_pem = "-----BEGIN PRIVATE KEY-----\n{$formatted_key}-----END PRIVATE KEY-----\n";
+            $key_resource = openssl_pkey_get_private($pkcs8_pem);
+
+            if (!$key_resource) {
+                // Fall back to PKCS#1 format ("BEGIN RSA PRIVATE KEY")
+                $pkcs1_pem = "-----BEGIN RSA PRIVATE KEY-----\n{$formatted_key}-----END RSA PRIVATE KEY-----\n";
+                $key_resource = openssl_pkey_get_private($pkcs1_pem);
+            }
+
+            if (!$key_resource) {
+                \Illuminate\Support\Facades\Log::error('signatureHelper: Failed to load private key. Check that config/keys.php contains a valid PKCS#8 or PKCS#1 private key.');
+            }
         } else {
-            $pem_formatted_key = "-----BEGIN PUBLIC KEY-----\n$formatted_key-----END PUBLIC KEY-----\n";
+            $pem_formatted_key = "-----BEGIN PUBLIC KEY-----\n{$formatted_key}-----END PUBLIC KEY-----\n";
             $key_resource = openssl_pkey_get_public($pem_formatted_key);
+
+            if (!$key_resource) {
+                \Illuminate\Support\Facades\Log::error('signatureHelper: Failed to load public key. Check that config/keys.php contains a valid public key.');
+            }
         }
 
         return $key_resource;
