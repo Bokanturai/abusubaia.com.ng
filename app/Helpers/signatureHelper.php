@@ -31,9 +31,9 @@ class signatureHelper
      */
     public static function params_sort(array $data): string
     {
-        // Filter empty string from the array
+        // Filter out null and empty-string values — PalmPay ignores those fields on their end
         $filtered_data = array_filter($data, function ($value) {
-            return $value !== '';
+            return $value !== '' && $value !== null;
         });
 
         // Sort the array by its keys in ascending order
